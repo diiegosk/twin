@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIRUS!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .rack{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin: 50px 0 20px;
+  }
+  .vial-card{
+    position:relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 22px 24px;
+    text-decoration:none;
+    color: var(--text);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    box-shadow: var(--shadow);
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .vial-card:hover{ transform: translateY(-6px) rotate(-0.4deg); border-color: rgba(237,231,214,0.3); }
+  .vial-card:hover .vial svg{ animation: wobble 0.6s ease; }
+  @keyframes wobble{
+    0%,100%{ transform: rotate(0deg); }
+    25%{ transform: rotate(-3deg); }
+    75%{ transform: rotate(3deg); }
+  }
+  .vial{ width: 96px; height:150px; margin-bottom: 18px; }
+  .vial-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.68rem;
+    color: var(--text-mute);
+    letter-spacing:0.14em;
+    margin-bottom: 10px;
+  }
+  .vial-card h3{
+    font-size: 1.28rem;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+  .vial-card p{
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    margin: 0 0 18px;
+  }
+  .vial-cta{
+    margin-top:auto;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.74rem;
+    letter-spacing:0.06em;
+    padding: 9px 16px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    transition: all .2s ease;
+  }
+  .vial-card:hover .vial-cta{
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
+  }
+  .intro-note{
+    margin-top: 46px;
+    max-width: 62ch;
+  }
+  @media (max-width: 760px){
+    .rack{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html">
+      <span class="bio">☣</span>
+      <span>
+        <span class="brand-name">VIRUS!</span><br>
+        <span class="brand-tag">Manual de laboratorio</span>
+      </span>
+    </a>
+  </div>
+
+  <section class="hero">
+    <p class="eyebrow">Archivo de expansiones · 3 muestras catalogadas</p>
+    <h1>Todo lo que las cartas hacen, explicado una vez y bien.</h1>
+    <p class="sub">Un cuerpo sano necesita cuatro órganos de colores distintos, libres de virus. Aquí tienes el efecto exacto de cada carta del juego base y de sus dos expansiones, para no volver a discutir una jugada en mitad de la partida.</p>
+  </section>
+
+  <div class="rack">
+
+    <a class="vial-card" href="virus.html">
+      <span class="vial-num">MUESTRA N.º 01</span>
+      <span class="vial">
+        <svg viewBox="0 0 96 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="6" width="36" height="14" rx="4" fill="#40352A"/>
+          <path d="M34 18 h28 v70 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="none" stroke="var(--paper-dim)" stroke-width="2.5"/>
+          <path d="M34 55 h28 v33 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="var(--organo-rojo)" opacity="0.85"/>
+          <circle cx="42" cy="70" r="3" fill="#fff" opacity="0.5"/>
+          <circle cx="52" cy="80" r="2" fill="#fff" opacity="0.4"/>
+          <rect x="30" y="60" width="36" height="20" rx="2" fill="var(--paper)" opacity="0.92"/>
+          <text x="48" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#1B2115">VIRUS!</text>
+        </svg>
+      </span>
+      <h3>Virus!</h3>
+      <p>El juego base. Órganos, virus, medicinas y tratamientos.</p>
+      <span class="vial-cta">Ver normas →</span>
+    </a>
+
+    <a class="vial-card" href="halloween.html">
+      <span class="vial-num">MUESTRA N.º 02</span>
+      <span class="vial">
+        <svg viewBox="0 0 96 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="6" width="36" height="14" rx="4" fill="#40352A"/>
+          <path d="M34 18 h28 v70 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="none" stroke="var(--paper-dim)" stroke-width="2.5"/>
+          <path d="M34 50 h28 v38 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="var(--acc-halloween)" opacity="0.88"/>
+          <path d="M34 50 h28 v10 h-28 Z" fill="var(--acc-halloween-2)" opacity="0.85"/>
+          <circle cx="44" cy="66" r="2.4" fill="#1B2115"/>
+          <circle cx="53" cy="66" r="2.4" fill="#1B2115"/>
+          <path d="M43 74 q5 5 10 0" stroke="#1B2115" stroke-width="2" fill="none"/>
+          <rect x="30" y="60" width="36" height="20" rx="2" fill="var(--paper)" opacity="0.92"/>
+          <text x="48" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#1B2115">HALLOWEEN</text>
+        </svg>
+      </span>
+      <h3>Expansión Halloween</h3>
+      <p>Maldiciones, monstruos y un órgano que muta.</p>
+      <span class="vial-cta">Ver normas →</span>
+    </a>
+
+    <a class="vial-card" href="virus2.html">
+      <span class="vial-num">MUESTRA N.º 03</span>
+      <span class="vial">
+        <svg viewBox="0 0 96 150" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="6" width="36" height="14" rx="4" fill="#40352A"/>
+          <path d="M34 18 h28 v70 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="none" stroke="var(--paper-dim)" stroke-width="2.5"/>
+          <path d="M34 55 h28 v33 a14 14 0 0 1 -14 14 a14 14 0 0 1 -14 -14 Z" fill="var(--acc-v2)" opacity="0.85"/>
+          <path d="M40 58 l4 8 l-3 1 l5 9" stroke="#0F1720" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="30" y="60" width="36" height="20" rx="2" fill="var(--paper)" opacity="0.92"/>
+          <text x="48" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#1B2115">VIRUS! 2</text>
+        </svg>
+      </span>
+      <h3>Virus! 2: Evolution</h3>
+      <p>Virus evolucionados, medicinas experimentales y cuarentena.</p>
+      <span class="vial-cta">Ver normas →</span>
+    </a>
+
+  </div>
+
+  <p class="intro-note" style="color:var(--text-mute); font-size:0.85rem;">
+    Nota de laboratorio: las ilustraciones de esta página son representaciones propias inspiradas en el juego, no fotografías de las cajas originales — pensadas solo como guía visual para consultar las normas.
+  </p>
+
+  <footer>
+    Ficha de consulta no oficial de <em>Virus!</em>, creada para jugar en casa sin discusiones. Basado en las reglas publicadas por Tranjis Games.
+  </footer>
+</div>
+</body>
+</html>

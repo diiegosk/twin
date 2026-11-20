@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virus! — Normas del juego base</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --acc: var(--acc-base); }
+  .tag-base{
+    display:inline-block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    color: var(--organo-rojo);
+    border: 1px solid rgba(195,60,44,0.4);
+    background: rgba(195,60,44,0.08);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .steps{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 16px;
+    margin: 22px 0 10px;
+  }
+  .step{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .step .n{
+    font-family:'JetBrains Mono', monospace;
+    color: var(--organo-rojo);
+    font-size: 0.75rem;
+  }
+  .step p{ margin: 8px 0 0; color: var(--text-dim); font-size:0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html">
+      <span class="bio">☣</span>
+      <span>
+        <span class="brand-name">VIRUS!</span><br>
+        <span class="brand-tag">Manual de laboratorio</span>
+      </span>
+    </a>
+    <a class="back-link" href="index.html">← Volver a las muestras</a>
+  </div>
+
+  <section class="hero">
+    <span class="tag-base">Muestra N.º 01 · Juego base</span>
+    <h1 style="margin-top:14px;">Virus!</h1>
+    <p class="sub">68 cartas y un objetivo muy simple de enunciar: monta un cuerpo con cuatro órganos sanos de colores distintos antes que nadie. Lo difícil es que tus rivales no van a dejar que sea fácil.</p>
+    <div class="meta-row">
+      <span class="meta-pill">2–6 jugadores</span>
+      <span class="meta-pill">21 órganos</span>
+      <span class="meta-pill">17 virus</span>
+      <span class="meta-pill">20 medicinas</span>
+      <span class="meta-pill">10 tratamientos</span>
+    </div>
+  </section>
+
+  <div class="section-title">
+    <span class="idx">§1</span>
+    <h2>Objetivo y preparación</h2>
+  </div>
+  <p class="section-lede">Gana la primera persona que consiga tener delante cuatro órganos sanos de cuatro colores diferentes: corazón (rojo), estómago (verde), cerebro (azul) y hueso (amarillo). Un órgano infectado no cuenta como sano hasta que se cura.</p>
+
+  <div class="steps">
+    <div class="step"><span class="n">01 — Barajar y repartir</span><p>Se baraja el mazo completo y se reparten 3 cartas a cada jugador. El resto queda boca abajo como mazo de robo.</p></div>
+    <div class="step"><span class="n">02 — Descarte a la vista</span><p>Junto al mazo se reserva un hueco para la pila de descartes, donde también van a parar los órganos destruidos.</p></div>
+    <div class="step"><span class="n">03 — Una carta por turno</span><p>En tu turno juegas o descartas una sola carta de tu mano, nunca varias a la vez.</p></div>
+    <div class="step"><span class="n">04 — Siempre con 3 en la mano</span><p>Después de jugar o descartar, robas hasta volver a tener 3 cartas. Con eso termina tu turno.</p></div>
+  </div>
+
+  <div class="callout"><strong>Comodín multicolor:</strong> los órganos, virus y medicinas multicolor funcionan como cualquier color. Un órgano multicolor puede infectarse o curarse con cartas de cualquier color, y un virus o medicina multicolor puede usarse sobre un órgano de cualquier color.</div>
+
+  <div class="section-title">
+    <span class="idx">§2</span>
+    <h2>Órganos</h2>
+  </div>
+  <p class="section-lede">Se colocan en tu propia zona de juego. Un órgano sano, vacunado o inmunizado cuenta para ganar; uno infectado, no.</p>
+  <div class="card-grid">
+    <div class="card acc-rojo">
+      <div class="card-head tipo-organo"><span class="kind">Órgano</span><span class="num mono">×5</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-rojo"></span></div><h3>Corazón</h3><p>Órgano rojo. Solo puede infectarse con un virus rojo o multicolor, y solo se cura con medicina roja o multicolor.</p></div>
+    </div>
+    <div class="card acc-verde">
+      <div class="card-head tipo-organo"><span class="kind">Órgano</span><span class="num mono">×5</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-verde"></span></div><h3>Estómago</h3><p>Órgano verde. Se infecta con virus verde o multicolor y se cura con medicina verde o multicolor.</p></div>
+    </div>
+    <div class="card acc-azul">
+      <div class="card-head tipo-organo"><span class="kind">Órgano</span><span class="num mono">×5</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-azul"></span></div><h3>Cerebro</h3><p>Órgano azul. Se infecta con virus azul o multicolor y se cura con medicina azul o multicolor.</p></div>
+    </div>
+    <div class="card acc-amarillo">
+      <div class="card-head tipo-organo"><span class="kind">Órgano</span><span class="num mono">×5</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-amarillo"></span></div><h3>Hueso</h3><p>Órgano amarillo. Se infecta con virus amarillo o multicolor y se cura con medicina amarilla o multicolor.</p></div>
+    </div>
+    <div class="card acc-multi">
+      <div class="card-head tipo-organo"><span class="kind">Órgano comodín</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-multi"></span></div><h3>Órgano multicolor</h3><p>Cuenta como un quinto órgano de cualquier color. Puede infectarse o curarse con cartas de cualquier color, incluidas las multicolor.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§3</span>
+    <h2>Virus</h2>
+  </div>
+  <p class="section-lede">Se juegan sobre los órganos de tus rivales para arruinarles el cuerpo sano que están construyendo.</p>
+  <div class="card-grid">
+    <div class="card acc-rojo">
+      <div class="card-head tipo-virus"><span class="kind">Virus</span><span class="num mono">×4</span></div>
+      <div class="card-body"><h3>Infectar</h3><p>Coloca un virus sobre un órgano libre de su mismo color. El órgano queda infectado y deja de contar como sano.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-virus"><span class="kind">Virus</span><span class="num mono">todos</span></div>
+      <div class="card-body"><h3>Extirpar</h3><p>Coloca un segundo virus del color correcto sobre un órgano ya infectado. El órgano y sus dos virus van a la pila de descartes.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-virus"><span class="kind">Virus</span><span class="num mono">todos</span></div>
+      <div class="card-body"><h3>Destruir medicina</h3><p>Un virus jugado sobre un órgano vacunado (con una sola medicina) destruye la medicina; el órgano se queda en juego, ahora libre.</p></div>
+    </div>
+    <div class="card acc-multi">
+      <div class="card-head tipo-virus"><span class="kind">Virus comodín</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-multi"></span></div><h3>Virus multicolor</h3><p>Puede infectar un órgano de cualquier color, incluido el órgano multicolor.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§4</span>
+    <h2>Medicinas</h2>
+  </div>
+  <p class="section-lede">Se juegan sobre tus propios órganos para curarlos o protegerlos.</p>
+  <div class="card-grid">
+    <div class="card acc-neutro">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina</span><span class="num mono">todos</span></div>
+      <div class="card-body"><h3>Curar</h3><p>Coloca una medicina del color correcto sobre un órgano infectado. El virus y la medicina van a la pila de descartes; el órgano vuelve a estar sano.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina</span><span class="num mono">todos</span></div>
+      <div class="card-body"><h3>Vacunar</h3><p>Coloca una medicina sobre un órgano libre. Queda vacunado: cuenta como sano, pero un virus todavía puede destruir esa vacuna.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina</span><span class="num mono">todos</span></div>
+      <div class="card-body"><h3>Inmunizar</h3><p>Coloca una segunda medicina sobre un órgano ya vacunado. Queda inmunizado para siempre: ningún virus ni tratamiento puede afectarlo ya.</p></div>
+    </div>
+    <div class="card acc-multi">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina comodín</span><span class="num mono">×4</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-multi"></span></div><h3>Botiquín multicolor</h3><p>Cura, vacuna o inmuniza un órgano de cualquier color.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§5</span>
+    <h2>Tratamientos</h2>
+  </div>
+  <p class="section-lede">Cartas de efecto inmediato que alteran la partida. Se juegan y van directas a la pila de descartes tras resolverse.</p>
+  <div class="card-grid">
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×2</span></div>
+      <div class="card-body"><h3>Contagio</h3><p>Traslada todos los virus posibles de tu cuerpo a órganos sanos de tus rivales, siempre respetando el color. No puedes contagiar órganos ya infectados o vacunados.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×3</span></div>
+      <div class="card-body"><h3>Ladrón de órganos</h3><p>Roba un órgano sano, infectado o vacunado de otro jugador y añádelo a tu cuerpo. No se pueden robar órganos inmunizados.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×3</span></div>
+      <div class="card-body"><h3>Trasplante</h3><p>Intercambia un órgano tuyo por el de otro jugador, sea del color que sea y esté sano, infectado o vacunado. Los inmunizados no se pueden tocar.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×1</span></div>
+      <div class="card-body"><h3>Guante de látex</h3><p>Todos los demás jugadores descartan toda su mano y deben robar 3 cartas nuevas, perdiendo así su próximo turno de jugar.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×1</span></div>
+      <div class="card-body"><h3>Error médico</h3><p>Intercambia tu cuerpo entero por el de otro jugador: todos los órganos, virus, vacunas e incluso inmunizados cambian de dueño.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    Ficha de consulta no oficial de <em>Virus!</em>, creada para jugar en casa sin discusiones. Basado en las reglas publicadas por Tranjis Games. Consulta también la <a href="halloween.html">expansión Halloween</a> y <a href="virus2.html">Virus! 2: Evolution</a>.
+  </footer>
+</div>
+</body>
+</html>

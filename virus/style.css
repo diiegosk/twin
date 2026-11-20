@@ -1,0 +1,361 @@
+/* =========================================================
+   VIRUS! — Manual de laboratorio
+   Sistema de diseño compartido
+   ========================================================= */
+
+:root{
+  /* Superficies */
+  --bg:        #0F1720;   /* sala de aislamiento, noche */
+  --bg-2:      #131E28;
+  --surface:   #1B2833;
+  --surface-2: #212F3B;
+  --line:      rgba(237, 231, 214, 0.14);
+
+  /* Papel de etiqueta / ficha clínica */
+  --paper:     #EFE6CC;
+  --paper-dim: #D8CDAF;
+  --ink:       #1B2115;
+
+  /* Color de texto sobre fondo oscuro */
+  --text:      #EDE7D6;
+  --text-dim:  #A9B4B8;
+  --text-mute: #6F7C81;
+
+  /* Los cuatro colores de órgano del juego (el mundo del propio juego) */
+  --organo-rojo:     #C33C2C;
+  --organo-verde:    #3F8F5B;
+  --organo-azul:     #2F6FA8;
+  --organo-amarillo: #D3A22B;
+  --organo-multi:    #8C5BA6;
+  --organo-bionico:  #8A97A0;
+  --organo-mutante:  #C9702B;
+
+  /* Acentos por expansión */
+  --acc-base:      #C33C2C;
+  --acc-halloween: #D9731F;
+  --acc-halloween-2:#5C3A73;
+  --acc-v2:        #4FB3BF;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 18px 40px -18px rgba(0,0,0,0.65);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(79,179,191,0.07), transparent 60%),
+    radial-gradient(900px 500px at 90% 0%, rgba(195,60,44,0.06), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Textura sutil de "papel milimetrado" de laboratorio */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(237,231,214,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237,231,214,0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  z-index: 0;
+}
+
+h1, h2, h3{
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.mono{
+  font-family: 'JetBrains Mono', monospace;
+}
+
+a{ color: inherit; }
+
+/* ---------- Estructura general ---------- */
+.wrap{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 26px 0 10px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 44px;
+}
+
+.brand{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  text-decoration:none;
+}
+.brand .bio{
+  font-size: 1.35rem;
+}
+.brand-name{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:1.15rem;
+  color: var(--text);
+}
+.brand-tag{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.68rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--text-mute);
+}
+
+.back-link{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  text-decoration:none;
+  color: var(--text-dim);
+  border:1px solid var(--line);
+  padding:8px 14px;
+  border-radius: 999px;
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+.back-link:hover{
+  color: var(--paper);
+  border-color: rgba(237,231,214,0.4);
+  background: rgba(237,231,214,0.05);
+}
+
+footer{
+  margin-top: 90px;
+  padding: 30px 0 60px;
+  border-top: 1px solid var(--line);
+  color: var(--text-mute);
+  font-size: 0.82rem;
+}
+
+/* ---------- Biohazard icon (firma visual) ---------- */
+.biohazard{
+  display:inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/* ---------- Etiquetas / eyebrow ---------- */
+.eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.eyebrow::before{
+  content:"";
+  width: 22px;
+  height: 1px;
+  background: var(--text-mute);
+}
+
+/* ---------- Botón / enlace de vial ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.04em;
+  text-decoration:none;
+  color: var(--ink);
+  background: var(--paper);
+  padding:11px 18px;
+  border-radius: 999px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(0,0,0,0.5);
+}
+
+/* =========================================================
+   Ficha de carta (usada en las páginas de normas)
+   ========================================================= */
+.card-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 28px 0 56px;
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(237,231,214,0.28);
+}
+
+.card-head{
+  padding: 14px 16px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.18);
+}
+.card-head .kind{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.66rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  opacity:0.85;
+}
+.card-head .num{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.66rem;
+  opacity:0.7;
+}
+
+.card-body{
+  padding: 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.card-body h3{
+  font-size: 1.05rem;
+  color: var(--paper);
+}
+.card-body p{
+  margin:0;
+  font-size: 0.89rem;
+  color: var(--text-dim);
+}
+.card-dots{
+  display:flex;
+  gap:5px;
+  margin-top:2px;
+}
+.dot{
+  width:9px; height:9px; border-radius:50%;
+  display:inline-block;
+}
+
+/* Colores de cabecera por tipo de carta */
+.tipo-organo    { background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent); color: var(--paper); }
+.tipo-virus     { color: #F3B7AC; }
+.tipo-medicina  { color: #BFE3CC; }
+.tipo-tratamiento{ color: #E7D9F5; }
+
+.dot-rojo{ background: var(--organo-rojo); }
+.dot-verde{ background: var(--organo-verde); }
+.dot-azul{ background: var(--organo-azul); }
+.dot-amarillo{ background: var(--organo-amarillo); }
+.dot-multi{ background: conic-gradient(var(--organo-rojo), var(--organo-amarillo), var(--organo-verde), var(--organo-azul), var(--organo-rojo)); }
+.dot-bionico{ background: var(--organo-bionico); }
+.dot-mutante{ background: var(--organo-mutante); }
+
+.card.acc-rojo .card-head{ border-top: 4px solid var(--organo-rojo); }
+.card.acc-verde .card-head{ border-top: 4px solid var(--organo-verde); }
+.card.acc-azul .card-head{ border-top: 4px solid var(--organo-azul); }
+.card.acc-amarillo .card-head{ border-top: 4px solid var(--organo-amarillo); }
+.card.acc-multi .card-head{ border-top: 4px solid var(--organo-multi); }
+.card.acc-gris .card-head{ border-top: 4px solid var(--organo-bionico); }
+.card.acc-naranja .card-head{ border-top: 4px solid var(--acc-halloween); }
+.card.acc-morado .card-head{ border-top: 4px solid var(--acc-halloween-2); }
+.card.acc-cian .card-head{ border-top: 4px solid var(--acc-v2); }
+.card.acc-neutro .card-head{ border-top: 4px solid var(--line); }
+
+/* ---------- Sección de reglas (bloques de texto) ---------- */
+.section-title{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin: 64px 0 6px;
+}
+.section-title h2{ font-size: 1.6rem; }
+.section-title .idx{
+  font-family:'JetBrains Mono', monospace;
+  color: var(--text-mute);
+  font-size:0.85rem;
+}
+.section-lede{
+  color: var(--text-dim);
+  max-width: 62ch;
+  margin: 10px 0 0;
+}
+
+.callout{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--acc);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  margin: 22px 0;
+  color: var(--text-dim);
+  font-size: 0.93rem;
+}
+.callout strong{ color: var(--paper); }
+
+.hero{
+  padding: 30px 0 20px;
+}
+.hero h1{
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  color: var(--paper);
+  max-width: 16ch;
+}
+.hero .sub{
+  color: var(--text-dim);
+  max-width: 56ch;
+  margin-top: 16px;
+  font-size: 1.02rem;
+}
+
+.meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.meta-pill{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.72rem;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border:1px solid var(--line);
+  color: var(--text-dim);
+}
+
+@media (max-width: 560px){
+  .wrap{ padding: 0 18px; }
+  .card-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 380px){
+  .card-grid{ grid-template-columns: 1fr; }
+}

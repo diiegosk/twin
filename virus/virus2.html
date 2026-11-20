@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virus! 2: Evolution — Normas de la expansión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --acc: var(--acc-v2); }
+  .tag-base{
+    display:inline-block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    color: var(--acc-v2);
+    border: 1px solid rgba(79,179,191,0.4);
+    background: rgba(79,179,191,0.08);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .modes{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 16px;
+    margin: 20px 0 10px;
+  }
+  .mode{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--acc-v2);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+  }
+  .mode h4{ margin:0 0 6px; color: var(--paper); font-size: 1rem; font-family:'Fraunces',serif; }
+  .mode p{ margin:0; color: var(--text-dim); font-size:0.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html">
+      <span class="bio">☣</span>
+      <span>
+        <span class="brand-name">VIRUS!</span><br>
+        <span class="brand-tag">Manual de laboratorio</span>
+      </span>
+    </a>
+    <a class="back-link" href="index.html">← Volver a las muestras</a>
+  </div>
+
+  <section class="hero">
+    <span class="tag-base">Muestra N.º 03 · Expansión</span>
+    <h1 style="margin-top:14px;">Virus! 2: Evolution</h1>
+    <p class="sub">Los virus han mutado y las medicinas de siempre ya no bastan. Esta expansión añade una segunda capa de virus y medicinas más resistentes, un órgano que ningún virus puede tocar, y una zona de cuarentena para retirar virus del juego por completo.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Se combina con Virus! base</span>
+      <span class="meta-pill">9 virus evolucionados</span>
+      <span class="meta-pill">7 medicinas experimentales</span>
+      <span class="meta-pill">12 tratamientos</span>
+    </div>
+  </section>
+
+  <div class="section-title">
+    <span class="idx">§1</span>
+    <h2>La regla clave: dos niveles</h2>
+  </div>
+  <p class="section-lede">Todo funciona como en el juego base, con una diferencia importante: un virus evolucionado solo se cura con una medicina experimental, y una medicina experimental solo se destruye con un virus evolucionado. Las cartas básicas y las evolucionadas no se pueden combatir entre sí.</p>
+
+  <div class="section-title">
+    <span class="idx">§2</span>
+    <h2>Virus evolucionados</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card acc-cian">
+      <div class="card-head tipo-virus"><span class="kind">Virus evolucionado</span><span class="num mono">×8</span></div>
+      <div class="card-body"><h3>Infectar / extirpar</h3><p>Se juegan igual que un virus normal: infectan un órgano libre de su color y, con un segundo virus (evolucionado o básico) sobre el mismo órgano, lo extirpan.</p></div>
+    </div>
+    <div class="card acc-cian">
+      <div class="card-head tipo-virus"><span class="kind">Virus evolucionado</span><span class="num mono">incl.</span></div>
+      <div class="card-body"><h3>Destruir vacuna</h3><p>Un virus evolucionado sobre un órgano vacunado con una sola medicina básica destruye esa medicina, igual que en el juego base.</p></div>
+    </div>
+    <div class="card acc-multi">
+      <div class="card-head tipo-virus"><span class="kind">Virus evolucionado comodín</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-multi"></span></div><h3>Virus evolucionado multicolor</h3><p>Infecta cualquier órgano y destruye cualquier medicina, de cualquier color. Solo se cura con una medicina experimental.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§3</span>
+    <h2>Medicinas experimentales</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card acc-cian">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina experimental</span><span class="num mono">×6</span></div>
+      <div class="card-body"><h3>Curar</h3><p>Elimina un virus, básico o evolucionado, de tu propio órgano. Ambas cartas van a la pila de descartes y el órgano vuelve a estar sano.</p></div>
+    </div>
+    <div class="card acc-cian">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina experimental</span><span class="num mono">incl.</span></div>
+      <div class="card-body"><h3>Superinmunizar</h3><p>Una sola medicina experimental sobre un órgano libre lo inmuniza directamente, sin necesidad de una segunda carta. Ni un virus básico ni uno evolucionado pueden tocarlo después.</p></div>
+    </div>
+    <div class="card acc-multi">
+      <div class="card-head tipo-medicina"><span class="kind">Medicina experimental comodín</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-multi"></span></div><h3>Medicina experimental multicolor</h3><p>Cura cualquier virus e inmuniza cualquier órgano, sea cual sea su color. No puede ser destruida por ningún virus.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§4</span>
+    <h2>Órgano biónico y cuarentena</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card acc-gris">
+      <div class="card-head tipo-organo"><span class="kind">Órgano especial</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-bionico"></span></div><h3>Órgano biónico</h3><p>No puede infectarse con ningún virus, ni básico ni evolucionado, así que tampoco necesita medicinas. Cuenta como un órgano más para completar tu cuerpo. Sí puede ser objetivo de tratamientos como el trasplante o el ladrón de órganos.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">incl.</span></div>
+      <div class="card-body"><h3>Cuarentena</h3><p>Aísla un virus de un órgano infectado y lo retira del juego para el resto de la partida, guardándolo en la «zona de cuarentena» (la propia caja). Cuenta como una cura a todos los efectos.</p></div>
+    </div>
+    <div class="card acc-neutro">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">incl.</span></div>
+      <div class="card-body"><h3>Traje de protección</h3><p>Te hace inmune, solo a ti, al efecto de un tratamiento que esté a punto de afectarte, incluso si ese tratamiento afecta a todos los jugadores por igual.</p></div>
+    </div>
+  </div>
+
+  <div class="callout"><strong>Del juego base siguen apareciendo:</strong> trasplante, ladrón de órganos y error médico también forman parte de esta expansión, y funcionan exactamente igual que en Virus! original.</div>
+
+  <div class="section-title">
+    <span class="idx">§5</span>
+    <h2>Modos de juego opcionales</h2>
+  </div>
+  <div class="modes">
+    <div class="mode">
+      <h4>Modo Epidemia (6 jugadores)</h4>
+      <p>Cada vez que uses una medicina experimental para curar un virus, ese virus se retira del juego de forma permanente en la zona de cuarentena, acelerando las partidas más numerosas.</p>
+    </div>
+    <div class="mode">
+      <h4>Modo Duelo (2 jugadores)</h4>
+      <p>Para partidas más largas y reñidas, la condición de victoria sube a cinco órganos sanos en vez de cuatro.</p>
+    </div>
+  </div>
+
+  <footer>
+    Ficha de consulta no oficial de <em>Virus!</em>, creada para jugar en casa sin discusiones. Basado en las reglas publicadas por Tranjis Games. Consulta también el <a href="virus.html">juego base</a> y la <a href="halloween.html">expansión Halloween</a>.
+  </footer>
+</div>
+</body>
+</html>

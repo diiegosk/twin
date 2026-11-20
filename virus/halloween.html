@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virus! Halloween — Normas de la expansión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root{ --acc: var(--acc-halloween); }
+  .tag-base{
+    display:inline-block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    color: var(--acc-halloween);
+    border: 1px solid rgba(217,115,31,0.4);
+    background: rgba(217,115,31,0.08);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .curse-banner{
+    margin: 30px 0;
+    background: linear-gradient(135deg, rgba(92,58,115,0.25), rgba(217,115,31,0.12));
+    border: 1px solid rgba(217,115,31,0.35);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .curse-banner .pump{ font-size: 1.8rem; line-height:1; }
+  .curse-banner h3{ color: var(--paper); font-size: 1.05rem; margin-bottom:6px; }
+  .curse-banner p{ margin:0; color: var(--text-dim); font-size:0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="index.html">
+      <span class="bio">☣</span>
+      <span>
+        <span class="brand-name">VIRUS!</span><br>
+        <span class="brand-tag">Manual de laboratorio</span>
+      </span>
+    </a>
+    <a class="back-link" href="index.html">← Volver a las muestras</a>
+  </div>
+
+  <section class="hero">
+    <span class="tag-base">Muestra N.º 02 · Expansión</span>
+    <h1 style="margin-top:14px;">Virus! Halloween</h1>
+    <p class="sub">Se mezcla con el mazo del juego base. Añade un órgano que muta, ladrones especializados por color y una maldición que puede quedarse contigo mucho más tiempo del que te gustaría.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Se combina con Virus! base</span>
+      <span class="meta-pill">1 órgano mutante</span>
+      <span class="meta-pill">11 tratamientos nuevos</span>
+    </div>
+  </section>
+
+  <div class="curse-banner">
+    <span class="pump">🎃</span>
+    <div>
+      <h3>La maldición de Truco o Trato</h3>
+      <p>Es la carta más famosa de esta expansión: mientras la tengas sobre tu cuerpo, no puedes ganar la partida aunque cumplas el resto de condiciones. Más detalles en su ficha, un poco más abajo.</p>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§1</span>
+    <h2>Órgano mutante</h2>
+  </div>
+  <p class="section-lede">Una nueva pieza para tu cuerpo, de color naranja, que sustituye a uno de tus órganos actuales.</p>
+  <div class="card-grid">
+    <div class="card acc-naranja">
+      <div class="card-head tipo-organo"><span class="kind">Órgano especial</span><span class="num mono">×1</span></div>
+      <div class="card-body"><div class="card-dots"><span class="dot dot-mutante"></span></div><h3>Órgano mutante</h3><p>Al entrar en juego, descarta uno de tus órganos (con sus virus o medicinas) y colócalo en su lugar. Es de color naranja: solo puede ser afectado por virus, medicinas o tratamientos multicolor. Cuenta como un órgano extra para completar tu cuerpo.</p></div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <span class="idx">§2</span>
+    <h2>Nuevos tratamientos</h2>
+  </div>
+  <p class="section-lede">Seis diseños distintos, en total once cartas, pensados para dar la vuelta a una partida en el momento menos pensado.</p>
+  <div class="card-grid">
+    <div class="card acc-naranja">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×4</span></div>
+      <div class="card-body"><h3>Ladrones de colores</h3><p>Cada carta indica un color. Roba el órgano de ese color a cualquier jugador, esté sano, infectado, vacunado o incluso inmunizado. No puedes acabar con dos órganos iguales.</p></div>
+    </div>
+    <div class="card acc-naranja">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×2</span></div>
+      <div class="card-body"><h3>Trasplante alienígena</h3><p>Como un trasplante normal, pero sin restricciones: intercambia cualquier órgano de un jugador por cualquier órgano de otro, sea cual sea su color o estado, incluidos los inmunizados.</p></div>
+    </div>
+    <div class="card acc-naranja">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×1</span></div>
+      <div class="card-body"><h3>Aparición</h3><p>Cambia esta carta por la que esté encima de la pila de descartes. Después puedes jugar esa carta robada en el acto o quedártela en la mano.</p></div>
+    </div>
+    <div class="card acc-naranja">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×2</span></div>
+      <div class="card-body"><h3>Experimento fallido</h3><p>Solo puede jugarse sobre un órgano infectado o vacunado. En el momento de jugarla, decides si actúa como un virus o como una medicina de cualquier color.</p></div>
+    </div>
+    <div class="card acc-morado">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento · maldición</span><span class="num mono">×1</span></div>
+      <div class="card-body"><h3>Truco o trato</h3><p>Se juega sobre el cuerpo de otro jugador, que no podrá ganar mientras la tenga encima, aunque reúna sus cuatro órganos sanos. Solo se libra de ella curando, vacunando o inmunizando un órgano de otro jugador: en ese momento, la maldición pasa a esa persona.</p></div>
+    </div>
+    <div class="card acc-morado">
+      <div class="card-head tipo-tratamiento"><span class="kind">Tratamiento</span><span class="num mono">×1</span></div>
+      <div class="card-body"><h3>Cambio de cuerpos</h3><p>Elige un sentido, horario o antihorario. Todos los jugadores pasan su cuerpo completo a quien tengan al lado en ese sentido, con órganos, virus, vacunas e inmunizados incluidos.</p></div>
+    </div>
+  </div>
+
+  <div class="callout"><strong>Compatibilidad:</strong> estas cartas se barajan junto con las del Virus! original (y también funcionan con Virus! 2: Evolution). El objetivo de la partida no cambia: seguir necesitando cuatro órganos sanos de distinto color, salvo que alguien tenga la maldición de Truco o trato encima.</div>
+
+  <footer>
+    Ficha de consulta no oficial de <em>Virus!</em>, creada para jugar en casa sin discusiones. Basado en las reglas publicadas por Tranjis Games. Consulta también el <a href="virus.html">juego base</a> y <a href="virus2.html">Virus! 2: Evolution</a>.
+  </footer>
+</div>
+</body>
+</html>
